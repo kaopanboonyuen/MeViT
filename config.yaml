@@ -1,0 +1,22 @@
+# ------------------------------------------------------------------------------
+# MeViT Configuration File
+# ------------------------------------------------------------------------------
+dataset:
+  train_path: "/path/to/train/dataset"
+  val_path: "/path/to/val/dataset"
+  test_path: "/path/to/test/dataset"
+
+model:
+  name: "MeViT"
+  backbone: "HRViT"
+  num_classes: 4  # Example: 4 classes for segmentation
+  input_size: [224, 224]
+
+training:
+  batch_size: 16
+  epochs: 50
+  learning_rate: 0.001
+  weight_decay: 0.0001
+
+evaluation:
+  metrics: ["precision", "recall", "f1_score", "mean_iou"
