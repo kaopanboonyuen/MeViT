@@ -18,6 +18,8 @@ Through extensive experimentation on Thailand's satellite scenes, **MeViT** has 
 - **Revised MixCFN Block**: Integrates multiple depth-wise convolution paths to efficiently capture multi-scale local information.
 - **State-of-the-Art Performance**: Achieves top metrics in semantic segmentation tasks on Landsat imagery, outperforming existing models.
 
+![](img/MEVIT_002.png)
+
 ## Installation
 
 Clone the repository and install the required dependencies:
@@ -47,6 +49,8 @@ pip install -r requirements.txt
 ## Data
 
 - **Landsat Satellite Imagery**: The data used in this project is not included in the repository. Please refer to the project's documentation for details on acquiring and preparing the necessary datasets.
+
+![](img/MEVIT_001.png)
 
 ## Project Website
 
@@ -78,3 +82,8 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 This work is based on research presented at a conference. Special thanks to our collaborators and contributors who supported the development of **MeViT**.
 
 For any questions or contributions, feel free to open an issue or submit a pull request. We appreciate your interest in our work!
+
+![](img/MEVIT_003.png)
+![](img/MEVIT_004.png)
+![](img/MEVIT_005.png)
+![](img/MEVIT_006.png)
