@@ -4,7 +4,7 @@
 
 **Author**: Teerapong Panboonyuen (also known as Kao Panboonyuen)  
 **Project**: [MeViT: A Medium-Resolution Vision Transformer](https://github.com/kaopanboonyuen/MeViT)  
-**Publication**: [MeViT: A Medium-Resolution Vision Transformer for Semantic Segmentation on Landsat Satellite Imagery for Agriculture in Thailand](https://kaopanboonyuen.github.io/MeViT)
+**Publication**: [MeViT: A Medium-Resolution Vision Transformer for Semantic Segmentation on Landsat Satellite Imagery for Agriculture in Thailand](https://www.mdpi.com/2072-4292/15/21/5124)
 
 ## Abstract
 
