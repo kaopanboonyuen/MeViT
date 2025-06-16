@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>MeViT: Medium-Resolution Vision Transformer</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'><text x='0' y='48' font-size='48'>🛰️</text></svg>">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7fa;
+            color: #333;
+            animation: fadeInBody 1s ease-in-out;
+        }
+
+        @keyframes fadeInBody {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        header {
+            background-color: #1d3557;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            animation: fadeInHeader 1.2s ease-out;
+        }
+
+        @keyframes fadeInHeader {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        header h1 {
+            font-size: 26px;
+            margin: 0;
+        }
+
+        .author {
+            margin-top: 10px;
+            font-size: 16px;
+            color: #f1faee;
+        }
+
+        .container {
+            padding: 40px 20px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        section {
+            margin-bottom: 50px;
+            animation: fadeInSection 0.8s ease-in;
+        }
+
+        @keyframes fadeInSection {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .project-description {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+
+        img:hover {
+            transform: scale(1.02);
+        }
+
+        h2, h3 {
+            color: #1d3557;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #e63946;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #f1faee;
+            color: #1d3557;
+        }
+
+        pre {
+            background: #f0f0f0;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #1d3557;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer a {
+            color: white;
+        }
+
+        ul {
+            line-height: 1.8;
+        }
+
+        .images {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>MeViT: A Medium-Resolution Vision Transformer for Semantic Segmentation 🛰️</h1>
+    <div class="author">
+        <p>Teerapong Panboonyuen</p>
+        <p>AGL (Advancing Geoscience Laboratory), Chulalongkorn University</p>
+        <p><a href="LICENSE" target="_blank"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="MIT License"></a></p>
+    </div>
+</header>
+
+<div class="container">
+    <section class="project-description">
+        <div class="text">
+            <p><strong>MeViT</strong> is a Vision Transformer (ViT) model tailored for semantic segmentation on medium-resolution Landsat satellite imagery of Thai agricultural regions. It classifies crops like para rubber, corn, and pineapple using a revised <strong>MixCFN</strong> block that balances depth-wise convolution paths for multi-scale feature extraction.</p>
+            <p>
+                At <strong>AGL (Advancing Geoscience Laboratory)</strong>, Chulalongkorn University, we focus on developing <strong>state-of-the-art AI models</strong> for satellite imagery and remote sensing applications. Our research spans Vision Transformers, stable diffusion, and weakly supervised learning for semantic segmentation, inpainting, and temporal forecasting.
+            </p>
+            <ul>
+                <li><strong>Precision:</strong> 92.22%</li>
+                <li><strong>Recall:</strong> 94.69%</li>
+                <li><strong>F1 Score:</strong> 93.44%</li>
+                <li><strong>Mean IoU:</strong> 83.63%</li>
+            </ul>
+            <p><a href="https://www.mdpi.com/2072-4292/15/21/5124" class="button" target="_blank">📄 Read Full Publication</a></p>
+        </div>
+        <img src="img/MEVIT_002.png" alt="MeViT Model Overview" />
+    </section>
+
+    <section>
+        <h2>🔧 Installation</h2>
+        <pre>
+git clone https://github.com/kaopanboonyuen/MeViT.git
+cd MeViT
+pip install -r requirements.txt
+        </pre>
+    </section>
+
+    <section>
+        <h2>🚀 Usage</h2>
+        <h3>1. Configuration</h3>
+        <p>Modify the <code>config.yaml</code> file to point to your dataset paths.</p>
+        <h3>2. Training</h3>
+        <pre>python train.py</pre>
+        <h3>3. Evaluation</h3>
+        <pre>python evaluate.py</pre>
+        <h3>4. Inference</h3>
+        <pre>python inference.py</pre>
+    </section>
+
+    <section>
+        <h2>🛰️ Dataset</h2>
+        <p>Landsat satellite data used in this project is not included in the repo. Refer to the documentation for download and preprocessing instructions.</p>
+        <img src="img/MEVIT_001.png" alt="Sample Landsat Imagery" />
+    </section>
+
+    <section>
+        <h2>🌐 Project Website</h2>
+        <p>Explore full documentation and updates at: <a href="https://kaopanboonyuen.github.io/MeViT" class="button" target="_blank">🔗 MeViT Website</a></p>
+    </section>
+
+    <section>
+        <h2>📖 Citation</h2>
+        <p>If you use this work, please cite:</p>
+        <pre>
+@article{panboonyuen2023mevit,
+  title={MeViT: A Medium-Resolution Vision Transformer for Semantic Segmentation on Landsat Satellite Imagery for Agriculture in Thailand},
+  author={Panboonyuen, Teerapong and Charoenphon, Chaiyut and Satirapod, Chalermchon},
+  journal={Remote Sensing},
+  volume={15},
+  number={21},
+  pages={5124},
+  year={2023},
+  publisher={MDPI}
+}
+        </pre>
+    </section>
+
+    <section>
+        <h2>🖼️ More Visualizations</h2>
+        <div class="images">
+            <img src="img/MEVIT_003.png" alt="Visualization 1" />
+            <img src="img/MEVIT_004.png" alt="Visualization 2" />
+            <img src="img/MEVIT_005.png" alt="Visualization 3" />
+            <img src="img/MEVIT_006.png" alt="Visualization 4" />
+        </div>
+    </section>
+</div>
+
+<footer>
+    <p>&copy; 2025 AGL. Developed by 
+        <a href="mailto:panboonyuen.kao@gmail.com" style="text-decoration: none; color: inherit;">
+            Teerapong Panboonyuen
+        </a>
+    </p>
+</footer>
+
+</body>
+</html>
